@@ -2,7 +2,6 @@ import React from 'react';
 import { View, Text, Image, TouchableOpacity, StyleSheet } from 'react-native';
 import Star from './Star'; // Import the Star component
 
-
 interface Product {
   id: string;
   name: string;
@@ -15,21 +14,6 @@ interface CardProps {
   product: Product;
   onPress: () => void;
 }
-
-// const Card: React.FC<CardProps> = ({ product, onPress }) => {
-//   return (
-//     <TouchableOpacity style={styles.container} onPress={onPress}>
-//       <Image source={product.image} style={styles.image} />
-//       <View style={styles.contentContainer}>
-//         <Text style={styles.title}>{product.name}</Text>
-//         <View style={styles.starContainer}>
-//           <Star rating={product.rating} size={16} filledColor="gold" emptyColor="gray" />
-//         </View>
-//       </View>
-//       <Text style={styles.price}>${product.price.toFixed(2)}</Text>
-//     </TouchableOpacity>
-//   );
-// };
 
 const Card: React.FC<CardProps> = ({ product, onPress }) => {
     return (
